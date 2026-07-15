@@ -17,10 +17,11 @@ Classifying house-number digits from the [Street View House Numbers (SVHN)](http
    ```
    pip install -r requirements.txt
    ```
+   If you want GPU support for the CNN, install torch with the command for your specific machine from the [PyTorch install selector](https://pytorch.org/get-started/locally/). Check the CUDA version your driver supports with `nvidia-smi`.
 2. Download `train_32x32.mat` and `test_32x32.mat` (the "Format 2" cropped-digit files) from the [SVHN site](http://ufldl.stanford.edu/housenumbers/) and place them in `data/`.
 3. Open `main.ipynb` in Jupyter and run top to bottom. `appendix.ipynb` can be run independently the same way.
 
-**GPU:** the CNN sections support training on a GPU via `device='cuda:N'` (see `train_cnn`'s docstring in `main.ipynb`). On a shared multi-GPU machine, pass an explicit device index rather than leaving `device=None` (which defaults to `cuda:0`) so multiple runs don't contend for the same GPU.
+**GPU:** the CNN sections support training on a GPU via `device='cuda:N'`.
 
 ## Results
 
